@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReporteDoctores" language="groovy" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="0cdd2ab3-901a-4045-b6a3-5d170cea854a">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="234"/>
+	<parameter name="Imagen" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[Select * From Doctores]]>
+	</queryString>
+	<field name="numeroColegiado" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nombresDoctor" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="apellidosDoctor" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="telefonoContacto" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="codigoEspecialidad" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band height="752" splitType="Stretch">
+			<image scaleImage="FillFrame">
+				<reportElement x="-20" y="-28" width="613" height="780" uuid="c6fe9465-2528-4601-8c3f-e118a648af81"/>
+				<imageExpression><![CDATA[$P{Imagen}]]></imageExpression>
+			</image>
+		</band>
+	</background>
+	<title>
+		<band height="49" splitType="Stretch">
+			<staticText>
+				<reportElement x="242" y="0" width="130" height="38" uuid="71958c1c-f98f-457c-a861-742531d708b4"/>
+				<textElement>
+					<font size="22"/>
+				</textElement>
+				<text><![CDATA[Doctores]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="73" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="70" splitType="Stretch">
+			<rectangle>
+				<reportElement x="11" y="0" width="89" height="20" uuid="79ddb06f-c53b-473f-bdf3-d518533ac49e"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="11" y="0" width="89" height="20" uuid="5fe71393-5180-454b-a1aa-c7847f9684a3"/>
+				<text><![CDATA[Numero Colegiado]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="114" y="0" width="87" height="20" uuid="ba3b740c-662a-44b2-8cef-534bf11e4697"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="114" y="0" width="87" height="20" uuid="78fc0ef6-40c4-4cfa-9364-278ce90b22bf"/>
+				<text><![CDATA[Nombres Doctor]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="211" y="0" width="100" height="20" uuid="603a14f4-7442-4633-8cff-f5b68bdaa79c"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="211" y="0" width="100" height="20" uuid="71488b0b-71c1-49fd-816a-ea7b83942e8f"/>
+				<text><![CDATA[Apellidos Doctor]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="321" y="0" width="100" height="20" uuid="3f3f1ccf-8ec4-410c-a425-194f37a3fef0"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="321" y="0" width="100" height="20" uuid="5681aac5-da63-4619-b338-953dff821cef"/>
+				<text><![CDATA[Telefono Contacto]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="432" y="0" width="100" height="20" uuid="6c3dfe56-7fd1-4938-95e2-54d70815d1e3"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="432" y="0" width="100" height="20" uuid="5b544129-5017-43f9-844a-14a909c91fba"/>
+				<text><![CDATA[Codigo Especialidad]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="38" splitType="Stretch">
+			<rectangle>
+				<reportElement x="114" y="0" width="87" height="20" uuid="99822193-c653-4db4-a8b7-bc24b980d5be"/>
+			</rectangle>
+			<textField>
+				<reportElement x="114" y="0" width="87" height="20" uuid="4ca0fec5-932c-45c2-b173-d3ce8ac92033"/>
+				<textFieldExpression><![CDATA[$F{nombresDoctor}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="11" y="2" width="89" height="20" uuid="106451ff-765a-4d1d-9a79-630911ff7cb5"/>
+			</rectangle>
+			<textField>
+				<reportElement x="11" y="2" width="89" height="20" uuid="093bc5e9-7855-4faf-99bf-e65df3982d08"/>
+				<textFieldExpression><![CDATA[$F{numeroColegiado}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="211" y="2" width="100" height="20" uuid="3a8a3b20-a404-4c1e-ad1a-4c71f09e1b41"/>
+			</rectangle>
+			<textField>
+				<reportElement x="211" y="2" width="100" height="20" uuid="9b0f8c6f-d679-4dfa-a210-d74ae1153d54"/>
+				<textFieldExpression><![CDATA[$F{apellidosDoctor}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="321" y="2" width="100" height="20" uuid="3fea8f1a-ba00-416b-85a1-c1d61fb7302c"/>
+			</rectangle>
+			<textField>
+				<reportElement x="321" y="2" width="100" height="20" uuid="42b6cae8-815d-44ec-9dc2-65933e69d0cd"/>
+				<textFieldExpression><![CDATA[$F{telefonoContacto}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="432" y="2" width="100" height="20" uuid="0fef00c0-05ba-4bc1-9266-a93a5a5cea85"/>
+			</rectangle>
+			<textField>
+				<reportElement x="432" y="2" width="100" height="20" uuid="1016f60c-b216-4990-b70c-6af2f079819f"/>
+				<textFieldExpression><![CDATA[$F{codigoEspecialidad}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch">
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="472" y="0" width="100" height="23" uuid="e3f2b497-10c3-4ffa-a769-d991aed8c31b"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+</jasperReport>

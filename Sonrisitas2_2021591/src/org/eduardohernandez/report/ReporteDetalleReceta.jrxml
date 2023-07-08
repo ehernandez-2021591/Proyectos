@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReporteReceta" language="groovy" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="735a5ba4-8b78-4642-ab7b-379a573c2517">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="Imagen" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[Select * From DetalleReceta]]>
+	</queryString>
+	<field name="codigoDetalleReceta" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="dosis" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="codigoReceta" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="codigoMedicamento" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band height="752" splitType="Stretch">
+			<image scaleImage="FillFrame">
+				<reportElement x="-18" y="-19" width="609" height="771" uuid="a861bf28-a197-458b-b76b-66977765a652"/>
+				<imageExpression><![CDATA[$P{Imagen}]]></imageExpression>
+			</image>
+		</band>
+	</background>
+	<title>
+		<band height="91" splitType="Stretch">
+			<staticText>
+				<reportElement x="229" y="19" width="144" height="30" uuid="dd084aa5-def8-4478-9f5b-3f2d2abfec03"/>
+				<textElement>
+					<font size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Detalle Receta]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="37" splitType="Stretch">
+			<rectangle>
+				<reportElement x="258" y="1" width="100" height="19" uuid="56a40143-da97-49c7-b640-e7d267e5d846"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="129" y="1" width="100" height="20" uuid="b31acedf-91d8-4ae4-b98a-6bb9cea70518"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="0" y="0" width="110" height="21" uuid="8e4c3844-b119-4ab2-b0a3-9f7f46790c6f"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="0" y="0" width="110" height="20" uuid="a8c25f68-f930-4126-9903-7392510675c8"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Codigo Detalle Receta]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="129" y="0" width="100" height="20" uuid="710c94c9-efb7-4dd3-b0d5-abfa2c330e14"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Dosis]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="258" y="0" width="100" height="20" uuid="1b173d38-562b-4dbe-9ea1-4b76d82bfdaa"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Codigo Receta]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="379" y="2" width="110" height="18" uuid="605f0511-90c4-4c69-8530-b528dca7123c"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="379" y="1" width="110" height="21" uuid="1ad7e4f2-b484-4e16-a1e6-71f99681a3dc"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Codigo Medicamento]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="27" splitType="Stretch">
+			<rectangle>
+				<reportElement x="379" y="1" width="110" height="20" uuid="b4c8f52c-9c3c-44ca-a565-8c0c802b02cf"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="258" y="1" width="100" height="20" uuid="98903442-1115-4642-9c3c-0288843e1bc4"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="129" y="1" width="100" height="20" uuid="9f951fd1-a7da-4fbf-9d16-6d1f366e3719"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="0" y="0" width="110" height="21" uuid="00d2032e-302f-40f2-b7cc-9fdf87cd859f"/>
+			</rectangle>
+			<textField>
+				<reportElement x="0" y="0" width="110" height="20" forecolor="#CC0000" uuid="6ea8bf72-5a77-4a51-9f8e-81fb71c825ed"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{codigoDetalleReceta}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="129" y="0" width="100" height="20" uuid="43b62316-e060-4657-84ff-0693b35eddc6"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{dosis}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="258" y="0" width="100" height="20" uuid="4456eace-e02f-4fa3-bf06-46d822b73845"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{codigoReceta}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="379" y="0" width="110" height="20" uuid="4e45a28b-5f9a-4d15-b3c0-67ce77746039"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{codigoMedicamento}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="104" splitType="Stretch">
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="489" y="0" width="100" height="20" uuid="bf832d04-cef3-49b7-b7db-2f7f0bb0c97f"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnFooter>
+</jasperReport>

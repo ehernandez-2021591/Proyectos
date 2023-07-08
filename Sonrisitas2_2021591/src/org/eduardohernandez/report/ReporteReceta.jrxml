@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReporteReceta" language="groovy" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="133b2809-0ee7-43c9-90a7-160849f8791e">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="288"/>
+	<parameter name="Imagen" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[Select * from Recetas;]]>
+	</queryString>
+	<field name="codigoReceta" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="fechaReceta" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="numeroColegiado" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band height="752" splitType="Stretch">
+			<image scaleImage="FillFrame">
+				<reportElement x="-20" y="-23" width="611" height="775" uuid="d01b198e-5158-493f-98ca-d400943ca5f1"/>
+				<imageExpression><![CDATA[$P{Imagen}]]></imageExpression>
+			</image>
+		</band>
+	</background>
+	<title>
+		<band height="59" splitType="Stretch">
+			<staticText>
+				<reportElement x="237" y="0" width="82" height="29" uuid="39402117-0321-474a-b6b1-295c7e233396"/>
+				<textElement textAlignment="Center">
+					<font size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Recetas]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="31" splitType="Stretch">
+			<rectangle>
+				<reportElement x="391" y="2" width="100" height="20" uuid="10830deb-246b-436a-a80e-061e64a687bf"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="31" y="2" width="100" height="20" uuid="d5188733-65d9-4817-9c52-129e836b34b3"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="219" y="2" width="100" height="20" uuid="5b1f3be9-81ee-4a52-9f33-db590af3f3cb"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="31" y="2" width="100" height="20" uuid="ee909449-feb1-46e4-b347-c0b8e11961a8"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Codigo Receta]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="219" y="2" width="100" height="20" uuid="f39a7808-7f76-4dcb-a267-b46acfc36ee2"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Fecha Receta]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="391" y="2" width="100" height="20" uuid="d9874af1-8265-41aa-b05e-f519fedd5c44"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Numero Colegiado]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="35" splitType="Stretch">
+			<rectangle>
+				<reportElement x="219" y="0" width="100" height="20" uuid="3b06963b-03db-4c59-b1b5-915ca83a25fe"/>
+			</rectangle>
+			<textField>
+				<reportElement x="219" y="0" width="100" height="20" uuid="85f3bfe6-a896-4a1d-9af0-7b0802c925a2"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{fechaReceta}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="31" y="0" width="100" height="20" uuid="1cf3c961-1c3f-429d-9360-1263639b5c82"/>
+			</rectangle>
+			<textField>
+				<reportElement x="31" y="0" width="100" height="20" forecolor="#FF0000" uuid="3912bf90-80d0-49fe-8572-e5846a55bc8f"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{codigoReceta}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="391" y="0" width="100" height="20" uuid="2f6e49d1-1a37-4580-ba3b-e5973e32e869"/>
+			</rectangle>
+			<textField>
+				<reportElement x="391" y="0" width="100" height="20" uuid="5625e6d8-a43c-4720-8222-5f2389f34a3a"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{numeroColegiado}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch">
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="491" y="0" width="100" height="20" uuid="58dd6db8-12bc-4543-b347-4b00c5640829"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+</jasperReport>

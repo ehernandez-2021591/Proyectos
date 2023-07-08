@@ -1,0 +1,155 @@
+.menu-bar {
+  -fx-background-color: rgb(9, 209, 142);
+  -fx-opacity: 0.5;
+  -fx-border-width: 2;
+}
+.menu-bar .label {
+  -fx-font-size: 14 pt;
+  -fx-font-family: "Bookman Old Style";
+  -fx-text-fill: white;
+  -fx-font-weight: bold;
+  -fx-padding: 10px;
+}
+
+.menu-bar .menu-button:hover,
+.menu-bar .menu-button:focused,
+.menu-bar .menu-button:showing {
+  -fx-background: black;
+  -fx-opacity: 0.5;
+  -fx-text-fill: white;
+}
+
+.menu-item {
+  -fx-padding: 0px 0px 0px 0px;
+  -fx-text-fill: black;
+  -fx-background: darkgray;
+}
+.menu-item .label {
+  -fx-font-size: 12 pt;
+  -fx-text-fill: black;
+}
+.menu-item .label:hover {
+  -fx-font-size: 14 pt;
+  -fx-background: rgb(24, 199, 39);
+  -fx-text-fill: white;
+}
+.context-menu {
+  -fx-background-color: white;
+  -fx-border-width: 0.2px;
+  -fx-border-color: black;
+  /** -fx-background-insets: 0.0, 1.0, 2.0;
+    -fx-padding: 0.333333em 0.083333em 0.666667em 0.083333em; 
+    -fx-opacity: 0.9;*/
+}
+
+.button1 {
+  -fx-background-color: #fdad70;
+  -fx-background-radius: 50 0 50 0;
+}
+
+.button1:hover {
+  -fx-background-color: #fee2d6;
+  -fx-background-radius: 50 0 50 0;
+}
+
+.button1:pressed {
+  -fx-background-color: #fee2d6;
+  -fx-background-radius: 50 0 50 0;
+}
+.button2 {
+  -fx-background-color: #7072fd;
+  -fx-background-radius: 30 0 30 0;
+}
+.button2:hover {
+  -fx-background-color: #33c5d8;
+  -fx-background-radius: 30 0 30 0;
+}
+
+.button2:pressed {
+  -fx-background-color: #33c5d8;
+  -fx-background-radius: 30 0 30 0;
+}
+
+.button3 {
+  -fx-background-color: #fdad70;
+  -fx-background-radius: 0 0;
+}
+
+.button3:hover {
+  -fx-background-color: #fdad70;
+  -fx-background-radius: 0 0;
+}
+
+.button3:pressed {
+  -fx-background-color: #fdad70;
+  -fx-background-radius: 0 0;
+}
+.fondoPrincipal {
+  -fx-background-color: #54b2e4;
+  -fx-border-color: #012b69;
+  -fx-border-width: 5px;
+  -fx-border-radius: 50px;
+}
+.columnas {
+  -fx-background-color: #166ed3;
+}
+.button4 {
+  -fx-background-color: #fa9c74;
+  -fx-background-radius: 50 50 50 50;
+}
+
+.button4:hover {
+  -fx-background-color: #fee2d6;
+  -fx-background-radius: 50 0 50 0;
+  -fx-background-size: 50000;
+}
+
+.button4:pressed {
+  -fx-background-color: #fee2d6;
+  -fx-background-radius: 50 50 50 50;
+}
+.fondo2 {
+  -fx-background-color: #169dd3;
+  -fx-background-radius: 50 50 50 50;
+}
+.fondo3 {
+  -fx-background-color: #fdad70;
+  -fx-background-radius: 0 0;
+  -fx-border-color: #012b69;
+  -fx-border-width: 5px;
+}
+.fondoPrincipal2 {
+  -fx-background-color: #1740b1;
+  -fx-border-color: #012b69;
+  -fx-border-width: 5px;
+}
+.fondoPrincipal3 {
+  -fx-background-color: #fdad70;
+  -fx-border-color: #012b69;
+  -fx-border-width: 5px;
+}
+.logo {
+  -fx-background-color: #030e1f;
+  -fx-background-radius: 50 50 50 50;
+}
+.textfield {
+  -fx-background-color: #023b91;
+  -fx-text-fill: white;
+  -fx-background-radius: 50 50 50 50;
+}
+.label1 {
+  -fx-text-fill: black;
+}
+.columnas2 {
+  -fx-background-color: #fafbfc;
+  -fx-background-radius: 20 20 20 20;
+}
+.btnLogin {
+  -fx-background-color: rgb(48, 158, 201);
+}
+.btnLogin:hover {
+  -fx-background-color: #154ea3;
+  -fx-scale-x: 1.2;
+  -fx-scale-y: 1.2;
+  -fx-text-fill: white;
+}

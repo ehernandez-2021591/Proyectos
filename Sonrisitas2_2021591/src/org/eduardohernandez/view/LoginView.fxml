@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="675.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.eduardohernandez.controller.LoginController">
+   <children>
+      <ImageView fitHeight="408.0" fitWidth="338.0" layoutY="-3.0">
+         <image>
+            <Image url="@../image/LoginGif.gif" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="69.0" layoutY="101.0">
+         <image>
+            <Image url="@../image/Logo_Sonrisitas2.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="93.0" fitWidth="121.0" layoutX="451.0" layoutY="14.0" mouseTransparent="true" nodeOrientation="RIGHT_TO_LEFT">
+         <image>
+            <Image url="@../image/Login.png" />
+         </image>
+         <effect>
+            <Glow />
+         </effect>
+      </ImageView>
+      <Label alignment="CENTER" layoutX="487.0" layoutY="116.0" prefHeight="36.0" prefWidth="50.0" text="Login" textAlignment="JUSTIFY">
+         <font>
+            <Font name="Gill Sans MT Condensed" size="25.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtUsuario" layoutX="417.0" layoutY="168.0" prefHeight="25.0" prefWidth="211.0" promptText="Username">
+         <effect>
+            <DropShadow />
+         </effect></TextField>
+      <Button layoutX="489.0" layoutY="262.0" mnemonicParsing="false" onAction="#login" styleClass="btnLogin" stylesheets="@../resource/Sonrisitas.css" text="Login">
+         <effect>
+            <Reflection />
+         </effect></Button>
+      <Hyperlink layoutX="406.0" layoutY="339.0" onMouseClicked="#ventanaUsuario" text="No Tiene una Cuenta? Registrese aqui" />
+      <ImageView fitHeight="25.0" fitWidth="35.0" layoutX="371.0" layoutY="213.0">
+         <image>
+            <Image url="@../image/Password.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="25.0" fitWidth="35.0" layoutX="371.0" layoutY="168.0">
+         <image>
+            <Image url="@../image/Username.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="txtPassword" layoutX="417.0" layoutY="213.0" prefHeight="25.0" prefWidth="211.0" promptText="Password">
+         <effect>
+            <DropShadow />
+         </effect></TextField>
+   </children>
+</AnchorPane>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="423.0" prefWidth="628.0" styleClass="fondoPrincipal3" stylesheets="@../resource/Sonrisitas.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.eduardohernandez.controller.ProgramadorController">
+   <children>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="196.0" layoutY="49.0" prefHeight="17.0" prefWidth="236.0" styleClass="button1" stylesheets="@../resource/VistaProgramador.css" text="Programador">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Circle fill="#79d3e6" layoutX="579.0" layoutY="362.0" radius="164.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+      <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="432.0" layoutY="223.0">
+         <image>
+            <Image url="@../image/IMG_20220502_161131175-modified.png" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="313.0" layoutY="120.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="262.0" />
+      <Label layoutX="6.0" layoutY="134.0" stylesheets="@../resource/VistaProgramador.css" text="Nombre: Eduardo " textFill="#fffcfc">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="6.0" layoutY="172.0" text="Andre Hernandez Carranza" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="6.0" layoutY="208.0" text="Carnet:2021591" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="4.0" layoutY="247.0" text="Seccion Tecnica: IN5AM" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="6.0" layoutY="277.0" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="49.0" fitWidth="58.0" layoutX="51.0" layoutY="14.0" onMouseClicked="#menuPrincipal">
+         <image>
+            <Image url="@../image/Casa.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+   </children>
+</AnchorPane>

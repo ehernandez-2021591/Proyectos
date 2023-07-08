@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReporteMedicamentos" language="groovy" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="52c85bdc-902b-45a5-b62b-af6df3a4b7ea">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="Imagen" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[Select * From Medicamentos;]]>
+	</queryString>
+	<field name="codigoMedicamento" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nombreMedicamento" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band height="752" splitType="Stretch">
+			<image>
+				<reportElement x="0" y="0" width="572" height="752" uuid="a8968215-6649-4032-b2bd-7779012e059b"/>
+				<imageExpression><![CDATA[$P{Imagen}]]></imageExpression>
+			</image>
+		</band>
+	</background>
+	<title>
+		<band height="50" splitType="Stretch">
+			<staticText>
+				<reportElement x="213" y="0" width="159" height="38" uuid="684005c6-987e-4dd0-99f4-882e19c59ca7"/>
+				<textElement>
+					<font size="22" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Medicamentos]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="27" splitType="Stretch">
+			<staticText>
+				<reportElement x="92" y="0" width="100" height="19" uuid="8d6c753e-fef8-49cc-93e1-7fd7ad45163d"/>
+				<text><![CDATA[Codigo Medicamento]]></text>
+			</staticText>
+			<line>
+				<reportElement x="92" y="19" width="100" height="1" uuid="3a36336a-7915-48ef-ae5c-fdaae7c0e5e1"/>
+			</line>
+			<staticText>
+				<reportElement x="258" y="1" width="100" height="19" uuid="6abffde1-1c7d-4d5c-85e4-35943a83c201"/>
+				<text><![CDATA[nombreMedicamento]]></text>
+			</staticText>
+			<line>
+				<reportElement x="258" y="18" width="100" height="1" uuid="f3321c32-6efb-4f13-94f1-20c56edeaf94"/>
+			</line>
+			<line>
+				<reportElement x="227" y="2" width="1" height="24" uuid="ab751e96-6fee-4568-9a30-b86ce451572d"/>
+			</line>
+			<line>
+				<reportElement x="372" y="0" width="1" height="26" uuid="306a0840-7030-4aeb-bc2e-26cc5b87275b"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="27" splitType="Stretch">
+			<textField>
+				<reportElement x="92" y="0" width="100" height="19" uuid="31a242ff-6d62-4a35-9187-5a7030d11377"/>
+				<textFieldExpression><![CDATA[$F{codigoMedicamento}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="92" y="20" width="100" height="1" uuid="0a86f549-1488-4743-a462-cab70d476c3c"/>
+			</line>
+			<textField>
+				<reportElement x="258" y="0" width="100" height="19" uuid="f1c3cc8a-954c-4f43-b600-a93f3e0b8b8f"/>
+				<textFieldExpression><![CDATA[$F{nombreMedicamento}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="258" y="20" width="100" height="1" uuid="c53d33aa-a0a5-4a66-b10a-e6ec54fda1f1"/>
+			</line>
+			<line>
+				<reportElement x="227" y="0" width="1" height="24" uuid="57a3480f-6e24-4ab6-8230-9e45e428ba8f"/>
+			</line>
+			<line>
+				<reportElement x="372" y="0" width="1" height="24" uuid="c1c18cd1-4727-4401-9d8b-c789357948d1"/>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch">
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="431" y="0" width="100" height="20" uuid="0d7e1e1a-e129-4003-89d9-26fb320b2fe0"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="258" y="0" width="100" height="1" uuid="937f5e5b-33f8-4669-be6f-00846c08b282"/>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+</jasperReport>

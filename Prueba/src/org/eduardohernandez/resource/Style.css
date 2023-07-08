@@ -1,0 +1,53 @@
+.btn{
+    -fx-background-color:#0c0c5c;
+}
+.btn2{
+    -fx-background-color:#0d14ab;
+    -fx-background-radius: 100 100 100 100 ;
+
+}
+.btn2:hover{
+    -fx-background-color: #0c0c5c;
+    -fx-text-fill:white;
+}
+.tool{
+    -fx-background-color:#e5ff00;
+}
+.pane{
+    -fx-background-color:#0c0c5c;
+}
+.pane2{
+    -fx-background-color:#879220;
+
+}
+.btn3{
+    -fx-background-color:#0d14ab;
+    -fx-text-fill:white;
+    -fx-font-weight:bold;
+    -fx-background-radius: 100 0 0 100
+
+}
+.btn3:hover{
+    -fx-background-color:#0c0c5c;
+    -fx-text-fill:black;
+
+}
+.label{
+    -fx-text-fill:white;
+    -fx-font-weight:bold;
+
+}
+.table{
+    -fx-background-color:#7f81a3;
+
+}
+.TableColumn{
+    -fx-background-color:#3f4161;
+    -fx-text-fill:white;
+
+}
+
+.txt{
+    -fx-text-fill:white;
+    -fx-background-color:black;
+}

@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReporteCitas" language="groovy" pageWidth="820" pageHeight="792" columnWidth="780" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="68bb8085-ecfd-4f98-97b5-2bd5eaa01da1">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="288"/>
+	<parameter name="Imagen" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[Select * From Citas]]>
+	</queryString>
+	<field name="codigoCita" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="fechaCita" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="horaCita" class="java.sql.Time">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tratamiento" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="descripCondActual" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="codigoPaciente" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="numeroColegiado" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band height="752" splitType="Stretch">
+			<image scaleImage="FillFrame">
+				<reportElement x="-20" y="-19" width="821" height="771" uuid="08dc2764-3c48-432b-8c0d-6b6afd232a23"/>
+				<imageExpression><![CDATA[$P{Imagen}]]></imageExpression>
+			</image>
+		</band>
+	</background>
+	<title>
+		<band height="69" splitType="Stretch">
+			<staticText>
+				<reportElement x="343" y="10" width="59" height="32" uuid="f493cc7a-22fe-4530-b0d2-d896792e6085"/>
+				<textElement textAlignment="Center">
+					<font size="22" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Citas]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="32" splitType="Stretch">
+			<rectangle>
+				<reportElement x="680" y="2" width="100" height="20" uuid="e8437bf2-313b-49ac-a022-64aee46862d7"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="570" y="2" width="100" height="20" uuid="694290d8-3516-43b3-982a-9fb734ebbfe7"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="442" y="2" width="113" height="20" uuid="5ac69dfb-78ea-4e04-9852-09a3aad0923f"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="326" y="2" width="100" height="20" uuid="353059cd-30c8-4de7-9c20-5b8a270ee277"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="216" y="2" width="100" height="20" uuid="65ae061e-1956-44b4-aac6-69a1084dd2bc"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="113" y="2" width="100" height="20" uuid="4d885c25-3b13-4cbe-a315-ca3a770a42ff"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="0" y="2" width="100" height="20" uuid="4f18d92c-364a-4b32-a0d9-4fdcb4449779"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="216" y="2" width="100" height="20" uuid="ea43500d-d17a-4b69-a951-54b43dbb6944"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Hora Cita]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="326" y="2" width="100" height="20" uuid="cf54b69c-9577-44c2-a4ee-28424ab5bf45"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tratamiento]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="442" y="2" width="113" height="20" uuid="5546704a-abcf-4401-921d-e6d0607a6369"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Descripcion Condicion]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="570" y="2" width="100" height="20" uuid="f6e441f7-a1ee-4a7c-a728-f50aaeeb7b10"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Codigo Paciente]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="680" y="2" width="100" height="20" uuid="f14939b5-56b3-4660-bdfc-a700e47aa23b"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Numero Colegiado]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="113" y="2" width="100" height="20" uuid="84352485-2531-458e-a1b8-7279a7c10b63"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Fecha Cita]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="2" width="100" height="20" uuid="8c7e0cec-fc33-4007-8382-357eaaf8640e"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Codigo Cita]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="28" splitType="Stretch">
+			<rectangle>
+				<reportElement x="680" y="2" width="100" height="20" uuid="eb6b95ce-5665-4845-9618-0c09b515cb31"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="570" y="2" width="100" height="20" uuid="6e3dd0ae-e339-4bb8-b39d-3d2a41cd36bd"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="442" y="2" width="113" height="20" uuid="9fb4b971-3df0-4c3a-980c-a0de9a4d4739"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="326" y="2" width="100" height="20" uuid="e2cf52db-44f0-456e-ab6e-f48ca4d0fd31"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="216" y="2" width="100" height="20" uuid="829bde0b-1827-4a76-80e7-77eb68a7fb11"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="113" y="2" width="100" height="20" uuid="af97663e-ebb8-487b-b6f7-4ac6b4c23a22"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="0" y="2" width="100" height="20" uuid="bf3daa21-7989-460a-aec8-12cf566ed67e"/>
+			</rectangle>
+			<textField>
+				<reportElement x="0" y="2" width="100" height="20" forecolor="#CC0000" uuid="8a3de011-18a4-461e-becb-ccaeee3b1fb0"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{codigoCita}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="113" y="2" width="100" height="20" uuid="506de40a-7f53-4180-853a-8e93160cb5e3"/>
+				<textFieldExpression><![CDATA[$F{fechaCita}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="216" y="2" width="100" height="20" uuid="383e358f-b2a1-45eb-b16b-0c4fe824f19e"/>
+				<textFieldExpression><![CDATA[$F{horaCita}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="326" y="2" width="100" height="20" uuid="b142518e-c6a4-4321-917c-c7dd12d1d5f4"/>
+				<textFieldExpression><![CDATA[$F{tratamiento}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="442" y="2" width="113" height="20" uuid="1c4d545a-19d1-43ed-a191-324b387fc646"/>
+				<textFieldExpression><![CDATA[$F{descripCondActual}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="570" y="2" width="100" height="20" uuid="b59153a2-9134-4203-a8c4-48f163f8f197"/>
+				<textFieldExpression><![CDATA[$F{codigoPaciente}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="680" y="2" width="100" height="20" uuid="bc6f6ace-41ca-4c24-ac96-35bcfbccf350"/>
+				<textFieldExpression><![CDATA[$F{numeroColegiado}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="107" splitType="Stretch">
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="690" y="0" width="100" height="20" uuid="c666f232-0d07-44de-845b-d093a88c98ac"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnFooter>
+</jasperReport>

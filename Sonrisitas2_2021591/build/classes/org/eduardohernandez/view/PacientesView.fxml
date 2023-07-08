@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="977.0" styleClass="fondoPrincipal" stylesheets="@../resource/Sonrisitas.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.eduardohernandez.controller.PacienteController">
+   <children>
+      <AnchorPane layoutX="29.0" layoutY="21.0" prefHeight="103.0" prefWidth="255.0" styleClass="fondo2" stylesheets="@../resource/VistaProgramador.css">
+         <children>
+            <Button fx:id="btnNuevo" alignment="BOTTOM_LEFT" layoutX="25.0" layoutY="2.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="25.0" prefWidth="111.0" styleClass="button4" stylesheets="@../resource/VistaProgramador.css" text="Nuevo">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <ImageView fitHeight="25.0" fitWidth="30.0" layoutX="65.0" layoutY="77.0">
+               <image>
+                  <Image url="@../image/1160515.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="imgNuevo" fitHeight="25.0" fitWidth="30.0" layoutX="95.0" layoutY="2.0" onMouseClicked="#nuevo">
+               <image>
+                  <Image url="@../image/Nuevo.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <Button fx:id="btnReporte" alignment="BOTTOM_RIGHT" layoutX="150.0" layoutY="39.0" mnemonicParsing="false" onAction="#reporte" prefHeight="25.0" prefWidth="105.0" styleClass="button4" stylesheets="@../resource/VistaProgramador.css" text="Reporte">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <ImageView fx:id="imgReporte" fitHeight="25.0" fitWidth="30.0" layoutX="159.0" layoutY="39.0">
+               <image>
+                  <Image url="@../image/Reporte.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <Button fx:id="btnEditar" alignment="BOTTOM_LEFT" layoutX="25.0" layoutY="77.0" mnemonicParsing="false" onAction="#editar" prefHeight="25.0" prefWidth="111.0" styleClass="button4" stylesheets="@../resource/VistaProgramador.css" text="Editar">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <ImageView fx:id="imgEditar" fitHeight="23.0" fitWidth="30.0" layoutX="80.0" layoutY="78.0">
+               <image>
+                  <Image url="@../image/Editar.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <Button fx:id="btnEliminar" alignment="BOTTOM_LEFT" layoutX="28.0" layoutY="59.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="25.0" prefWidth="111.0" styleClass="button4" stylesheets="@../resource/VistaProgramador.css" text="Eliminar">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Circle fill="#169dd3" layoutX="530.0" layoutY="-9.0" radius="100.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0">
+         <effect>
+            <DropShadow />
+         </effect></Circle>
+      <AnchorPane layoutX="845.0" layoutY="-63.0" prefHeight="154.0" prefWidth="82.0" styleClass="logo" stylesheets="@../resource/VistaProgramador.css" />
+      <GridPane fx:id="grpFechas" layoutX="24.0" layoutY="124.0" prefHeight="113.0" prefWidth="903.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="119.0" minWidth="10.0" prefWidth="104.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="138.0" minWidth="10.0" prefWidth="138.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="138.0" minWidth="10.0" prefWidth="138.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="136.0" minWidth="10.0" prefWidth="124.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="119.0" minWidth="10.0" prefWidth="54.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="178.0" minWidth="10.0" prefWidth="165.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="29.0" minHeight="10.0" prefHeight="29.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="35.0" minHeight="10.0" prefHeight="32.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="38.0" minHeight="5.0" prefHeight="5.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label prefHeight="17.0" prefWidth="105.0" styleClass="label1" stylesheets="@../resource/Sonrisitas.css" text="CodigoPaciente" textFill="#000000b4">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtNombresPaciente" editable="false" prefHeight="31.0" prefWidth="128.0" styleClass="textfield" GridPane.columnIndex="4">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets right="3.0" />
+               </GridPane.margin>
+            </TextField>
+            <Label prefHeight="17.0" prefWidth="127.0" styleClass="label1" text="NombresPaciente" textFill="#000000b4" GridPane.columnIndex="2">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="12.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets right="3.0" />
+               </GridPane.margin>
+            </Label>
+            <TextField fx:id="txtCodigoPaciente" editable="false" layoutX="110.0" layoutY="10.0" prefHeight="31.0" prefWidth="128.0" styleClass="textfield" GridPane.columnIndex="1">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </TextField>
+            <Label prefHeight="17.0" prefWidth="95.0" styleClass="label1" text="Apellidos" textFill="#000000b4" GridPane.columnIndex="5">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label prefHeight="17.0" prefWidth="89.0" styleClass="label1" text="SexoPaciente" textFill="#000000b4" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtSexo" editable="false" prefHeight="15.0" prefWidth="119.0" styleClass="textfield" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="txtApellidosPaciente" editable="false" prefHeight="31.0" prefWidth="128.0" styleClass="textfield" stylesheets="@../resource/Sonrisitas.css" GridPane.columnIndex="6">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </TextField>
+            <Label contentDisplay="CENTER" prefHeight="17.0" prefWidth="126.0" styleClass="label1" text="FechaNacimiento" textFill="#000000b4" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label prefHeight="17.0" prefWidth="89.0" styleClass="label1" text="Direccion" textFill="#000000b4" GridPane.columnIndex="5" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtDireccionPaciente" editable="false" prefHeight="31.0" prefWidth="128.0" styleClass="textfield" GridPane.columnIndex="6" GridPane.rowIndex="2">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </TextField>
+            <Label prefHeight="31.0" prefWidth="89.0" styleClass="label1" text="Telefono" textFill="#000000b4" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtTelefonoPersonal" editable="false" prefHeight="22.0" prefWidth="138.0" styleClass="textfield" GridPane.columnIndex="2" GridPane.rowIndex="3">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </TextField>
+            <Label contentDisplay="CENTER" prefHeight="17.0" prefWidth="105.0" styleClass="label1" text="Primera Visita" textFill="#000000b4" GridPane.columnIndex="4" GridPane.rowIndex="3">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </GridPane>
+      <TableView fx:id="tblPacientes" layoutX="220.0" layoutY="244.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="200.0" prefWidth="735.0" styleClass="columnas2">
+        <columns>
+          <TableColumn fx:id="colCodigoPaciente" prefWidth="75.0" styleClass="columnas" text="CodPaciente" />
+          <TableColumn fx:id="colNombrePaciente" prefWidth="75.0" styleClass="columnas" text="Nombres" />
+            <TableColumn fx:id="colApellidosPaciente" prefWidth="75.0" styleClass="columnas" text="Apellidos" />
+            <TableColumn fx:id="colSexo" prefWidth="75.0" styleClass="columnas" text="Sexo" />
+            <TableColumn fx:id="colFechaNacimiento" prefWidth="127.0" styleClass="columnas" text="Fecha Nacimiento" />
+            <TableColumn fx:id="colDireccionPaciente" prefWidth="105.0" styleClass="columnas" text="Direccion" />
+            <TableColumn fx:id="colTelefonoPersonal" prefWidth="105.0" styleClass="columnas" text="Telefono" />
+            <TableColumn fx:id="colFechaPrimeraVisita" prefWidth="105.0" styleClass="columnas" text="Primera Visita" />
+        </columns>
+      </TableView>
+      <Label layoutX="815.0" layoutY="81.0" prefHeight="31.0" prefWidth="280.0" text="Clinica Sonrisitas">
+         <font>
+            <Font name="Book Antiqua" size="20.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="74.0" fitWidth="82.0" layoutX="845.0" layoutY="7.0">
+         <image>
+            <Image url="@../image/Diente.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="217.0" fitWidth="159.0" layoutX="38.0" layoutY="227.0">
+         <image>
+            <Image url="@../image/371f14644d93578b5b58df355a57024f.gif" />
+         </image>
+      </ImageView>
+      <Label layoutX="480.0" layoutY="29.0" text="Pacientes" textFill="#fffdfd">
+         <font>
+            <Font name="Calibri Bold" size="25.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="41.0" fitWidth="42.0" layoutX="61.0" layoutY="433.0" onMouseClicked="#menuPrincipal">
+         <image>
+            <Image url="@../image/Casa.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fx:id="imgEliminar" fitHeight="25.0" fitWidth="30.0" layoutX="88.0" layoutY="60.0" onMouseClicked="#eliminar">
+         <image>
+            <Image url="@../image/Eliminar.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+   </children>
+</AnchorPane>
